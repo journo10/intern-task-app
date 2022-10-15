@@ -1,0 +1,325 @@
+main {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+}
+
+main .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Left */
+main .container .product-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+    width: 550px;
+    height: auto;
+    padding: 2rem;
+}
+
+main .container .product-left .active-img {
+    width: 275px;
+    height: 325px;
+    object-fit: cover;
+    object-position: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #f27a1a;
+}
+
+main .container .product-left .p-image {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+main .container .product-left .p-image .img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    opacity: 0.7;
+    transition: all .5s ease-out;
+    padding: 1rem;
+}
+
+main .container .product-left .p-image .img:hover {
+    opacity: 1;
+    border: 1px solid #f27a1a;
+}
+
+/* Right */
+main .container .product-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.25rem;
+    width: 700px;
+    height: auto;
+    padding: 2rem;
+}
+
+main .container .product-right .product-text .p-title {
+    font-size: 2.75rem;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom: 1.5rem;
+}
+
+main .container .product-right .product-text .p-desc {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #808080;
+    font-family: inherit;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom: 1.25rem;
+}
+
+main .container .product-right .product-text .p-price {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #f27a1a;
+    font-family: inherit;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom: 1.25rem;
+}
+
+main .container .product-right .p-form {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .container .product-right .p-form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: inherit;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+main .container .product-right .p-form .select {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f27a1a;
+    font-family: inherit;
+    line-height: normal;
+    letter-spacing: normal;
+    border: none;
+    outline: none;
+    width: 150px;
+    border-bottom: #f27a1a 1px solid;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+main .container .product-right .product-count {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 3rem;
+}
+
+main .container .product-right .product-count .p-count {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #f27a1a;
+    background-color: #f7f8fd;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+main .container .product-right .product-count .p-count>button {
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+main .container .product-right .product-add {
+    width: 250px;
+    height: 50px;
+}
+
+main .container .product-right .product-add>button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #f27a1a;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: normal;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main .container .product-right .product-add>button:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media only screen and (max-width:992px) {
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    main .container {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    main .container .product-left .active-img {
+        width: 150px;
+        height: 200px;
+    }
+
+    main .container .product-left .p-image .img {
+        width: 55px;
+        height: 55px;
+    }
+
+    main .container .product-right .product-text .p-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    main .container .product-right .product-text .p-desc {
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
+
+    main .container .product-right .p-form .select {
+        width: 75px;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: inherit;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    main .container .product-right .product-add {
+        width: 135px;
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    main .container {
+        margin-top: 30rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main .container .product-right .product-text .p-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    main .container .product-right .product-text .p-desc {
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-align: center;
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    main .container .product-right .product-text .p-price {
+        margin: 1rem auto;
+        width: 400px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .container .product-right .p-form {
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-align: center;
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    main .container .product-right .p-form .select {
+        width: 75px;
+    }
+
+    main .container .product-right .product-count {
+        margin: 1rem auto;
+        width: 400px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .container .product-right .product-add {
+        width: 135px;
+        height: 50px;
+    }
+}
