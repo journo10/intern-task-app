@@ -1,0 +1,86 @@
+.m-card {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.m-card .modal {
+    max-width: 500px;
+    width: 100%;
+    height: 350px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    color: #000000;
+    padding: 1.25rem;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-card .modal img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.m-card .modal .modal-text .m-name,
+.m-card .modal .modal-text .m-title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+    font-family: inherit;
+}
+
+.m-card .modal .modal-text .m-desc {
+    margin-bottom: 1rem;
+    font-size: 1.65rem;
+    font-weight: 300;
+    line-height: normal;
+    font-family: inherit;
+    color: #212529;
+}
+
+.m-card .modal .modal-text .m-btn>i {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #f27a1a;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: .5;
+    cursor: pointer;
+    text-align: center;
+}
+
+.m-card .modal .modal-text .m-btn>i:hover {
+    opacity: .7;
+    transition: all .5s ease;
+}
+
+/* RESPONSİVE */
+
+@media screen and (max-width:768px) {
+    .m-card .modal {
+        max-width: 400px;
+        width: 100%;
+        height: 200px;
+    }
+}

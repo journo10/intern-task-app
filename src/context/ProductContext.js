@@ -12,6 +12,12 @@ export const ProductProvider = ({ children }) => {
 
   //console.log(product.productList);
 
+  //Modal Card
+  const [openModal, setOpenModal] = useState(false);
+  const onClose = () => {
+    setOpenModal(false);
+  };
+
   //Add To Card
   const addToCart = (item) => {
     setProduct({
@@ -76,6 +82,9 @@ export const ProductProvider = ({ children }) => {
     dec,
     totalCart,
     totalCartCount,
+    openModal,
+    setOpenModal,
+    onClose,
   };
   return (
     <ProductContext.Provider value={values}>{children}</ProductContext.Provider>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useProduct } from "../../context/ProductContext";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const { setOpenModal, totalCartCount} = useProduct();
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -40,9 +42,9 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="basket">
-          <button className="basket-btn">
+          <button className="basket-btn" onClick={() => setOpenModal(true)}>
             <i className="fa-solid fa-cart-plus"></i>
-            <span>1</span>
+            <span>{totalCartCount}</span>
           </button>
         </div>
         <div className="menu" onClick={handleMenu}>

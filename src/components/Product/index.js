@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useProduct } from "../../context/ProductContext";
 import "./Product.css";
 import { images } from "../../data/data";
 
 const Product = () => {
   const [activeImg, setActiveImg] = useState(images[0]);
+  const { product, addToCart } = useProduct();
 
   return (
     <main>
@@ -28,55 +30,50 @@ const Product = () => {
           </div>
         </div>
         {/* Right */}
-        <div className="product-right">
-          <div className="product-text">
-            <h1 className="p-title">Customizable Modern T-shirt</h1>
-            <p className="p-desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              nesciunt vero recusandae! Odit placeat doloribus iusto corrupti
-              voluptates odio possimus, nostrum aliquid voluptate quae,
-              recusandae qui eum maiores, fuga vero officiis inventore cum
-              numquam fugiat reprehenderit. Hic nihil veritatis tenetur ullam
-              saepe laudantium eaque nostrum quasi minus, quod molestias
-              corrupti obcaecati pariatur officiis labore facere assumenda a?
-              Fuga eum laudantium delectus quam qui, veritatis voluptatibus,
-              necessitatibus eius deserunt, debitis corrupti reiciendis a
-              reprehenderit nobis odio? Vel quis omnis natus, repellendus vitae
-              libero dolore facilis quod tempora debitis, dolorem repellat non
-              error tenetur temporibus. Ipsam quasi amet autem cumque eius.
-              Perspiciatis?
-            </p>
-            <span className="p-price">$89.99</span>
-          </div>
-          <form className="p-form">
-            <label htmlFor="colors">Colors:</label>
-            <select name="colors" id="colors" className="select">
-              <option defaultValue="Seçiniz">Seçiniz</option>
-              <option value="Red">Red</option>
-              <option value="Blue">Blue</option>
-              <option value="Yellow">Yellow</option>
-            </select>
-            <label htmlFor="sizes">Sizes:</label>
-            <select name="sizes" id="sizes" className="select">
-              <option defaultValue="Seçiniz">Seçiniz</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-            </select>
-          </form>
-          <div className="product-count">
-            <div className="p-count">
-              <button>-</button>
-              <span>0</span>
-              <button>+</button>
+        {product.productList.map((p) => (
+          <div className="product-right" key={p.id}>
+            <div className="product-text">
+              <h1 className="p-title">{p.title}</h1>
+              <p className="p-desc">{p.desc}</p>
+              <span className="p-price">
+                <b>$</b>
+                {p.price}
+              </span>
             </div>
-            <div className="product-add">
-              <button>
-                <i className="fa-solid fa-cart-plus"></i>Add To Card
-              </button>
+            <form className="p-form">
+              <label htmlFor="sizes">Sizes:</label>
+              <select name="sizes" id="sizes" className="select">
+                <option defaultValue="Seçiniz">Seçiniz</option>
+                {p.sizes.map((s) => (
+                  <option key={s.id} value={s.size}>
+                    {s.size}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="colors">Colors:</label>
+              <select name="colors" id="colors" className="select">
+                <option defaultValue="Seçiniz">Seçiniz</option>
+                {p.colors.map((c) => (
+                  <option key={c.id} value={c.color}>
+                    {c.color}
+                  </option>
+                ))}
+              </select>
+            </form>
+            <div className="product-count">
+              {/* <div className="p-count">
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+              </div> */}
+              <div className="product-add">
+                <button onClick={() => addToCart(p)}>
+                  <i className="fa-solid fa-cart-plus"></i>Add To Card
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </main>
   );

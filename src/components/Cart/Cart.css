@@ -1,0 +1,101 @@
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.cart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart .container {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f3f3;
+    border-radius: 10px;
+}
+
+.cart .container .cart-text h4 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: inherit;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.cart .container .cart-text .p-desc {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.cart .container .cart-text .p-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: inherit;
+    line-height: normal;
+    margin-bottom: 1rem;
+    color: #f27a1a;
+}
+
+.cart .container .p-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+
+.cart .container .p-btn .p-count{
+    width: 75px;
+    height: 100%;
+    padding: 0.5rem;
+    background: transparent;
+    color: #f27a1a;
+    font-size: 1.75rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cart .container .p-btn .p-count .btn{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.75rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cart .container .p-btn .btn{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #f27a1a;
+    opacity: .7;
+    transition: all .5s;
+}
+
+.cart .container .p-btn .btn:hover{
+    opacity: 1;
+}
+
+/* Responsive */
+@media screen and (max-width:768px) {
+    
+}

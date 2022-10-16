@@ -8,8 +8,9 @@ export const data = [
   {
     id: 1,
     title: "Customizable Modern T-shirt”",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nesciunt vero recusandae! Odit placeat doloribus iusto corrupti voluptates odio possimus, nostrum aliquid voluptate quae, recusandae qui eum maiores, fuga vero officiis inventore cum numquam fugiat reprehenderit. Hic nihil veritatis tenetur ullam saepe laudantium eaque nostrum quasi minus, quod molestias corrupti obcaecati pariatur officiis labore facere assumenda a? Fuga eum laudantium delectus quam qui, veritatis voluptatibus, necessitatibus eius deserunt, debitis corrupti reiciendis a reprehenderit nobis odio? Vel quis omnis natus, repellendus vitae libero dolore facilis quod tempora debitis, dolorem repellat non error tenetur temporibus. Ipsam quasi amet autem cumque eius. Perspiciatis? ",
-    price: 89.99,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id esse ipsum officiis repellendus eos sapiente natus dolorum atque quibusdam illum, dolores culpa consequuntur provident assumenda eveniet delectus commodi vel recusandae, quia harum libero. Quam veritatis et ipsa ex quas sapiente! Voluptatibus iusto ex pariatur distinctio atque eligendi perferendis perspiciatis.",
+    price: 109.99,
+    image:img_1,
     sizes: [
       { id: 1, size: "S", price: 89.99 },
       { id: 2, size: "M", price: 99.99 },

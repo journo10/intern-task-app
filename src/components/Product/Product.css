@@ -272,6 +272,10 @@ main .container .product-right .product-add>button:hover {
         flex-direction: column;
     }
 
+    main .container .product-left .p-image{
+        width: 350px;
+    }
+
     main .container .product-right .product-text .p-title {
         font-size: 1.75rem;
         font-weight: bold;
