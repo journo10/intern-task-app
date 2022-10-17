@@ -17,7 +17,7 @@ main .container {
     align-items: center;
     gap: 5rem;
     padding: 2rem;
-    margin-top: 2.5rem;
+    margin-top: 5rem;
 }
 
 /* Left */
@@ -207,7 +207,7 @@ main .container .product-right .product-add>button:hover {
     opacity: 1;
 }
 
-/* Responsive */
+
 @media only screen and (max-width:992px) {
     main {
         width: 100%;
@@ -215,11 +215,13 @@ main .container .product-right .product-add>button:hover {
     }
 
     main .container {
-        margin-top: 5rem;
+        margin-top: 30rem;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        flex-wrap: wrap;
+       
     }
 
     main .container .product-left .active-img {
@@ -240,6 +242,7 @@ main .container .product-right .product-add>button:hover {
     main .container .product-right .product-text .p-desc {
         font-size: 1.15rem;
         font-weight: bold;
+        text-align: center;
     }
 
     main .container .product-right .p-form .select {
@@ -249,6 +252,15 @@ main .container .product-right .product-add>button:hover {
         font-family: inherit;
         line-height: normal;
         letter-spacing: normal;
+    }
+
+    main .container .product-right .product-count {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     main .container .product-right .product-add {
@@ -269,31 +281,35 @@ main .container .product-right .product-add>button:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     main .container .product-left .p-image{
-        width: 350px;
+        width: 300px;
     }
 
     main .container .product-right .product-text .p-title {
         font-size: 1.75rem;
         font-weight: bold;
         text-align: center;
+        
     }
 
     main .container .product-right .product-text .p-desc {
         font-size: 1.15rem;
         font-weight: bold;
         text-align: center;
-        width: 400px;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     main .container .product-right .product-text .p-price {
-        margin: 1rem auto;
-        width: 400px;
+        width: 100%;
+        height: auto;
         text-align: center;
         display: flex;
         align-items: center;
@@ -304,9 +320,9 @@ main .container .product-right .product-add>button:hover {
         font-size: 1.15rem;
         font-weight: bold;
         text-align: center;
-        width: 400px;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
+        
     }
 
     main .container .product-right .p-form .select {
@@ -314,8 +330,8 @@ main .container .product-right .product-add>button:hover {
     }
 
     main .container .product-right .product-count {
-        margin: 1rem auto;
-        width: 400px;
+        width: 100%;
+        height: auto;
         text-align: center;
         display: flex;
         align-items: center;
