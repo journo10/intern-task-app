@@ -237,6 +237,7 @@ main .container .product-right .product-add>button:hover {
     main .container .product-right .product-text .p-title {
         font-size: 1.75rem;
         font-weight: bold;
+        text-align: center;
     }
 
     main .container .product-right .product-text .p-desc {
