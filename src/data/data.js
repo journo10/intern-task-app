@@ -7,7 +7,7 @@ export const images = [img_1, img_2, img_3];
 export const data = [
   {
     id: 1,
-    title: "Customizable Modern T-shirt”",
+    title: "Customizable Modern T-shirt",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, id esse ipsum officiis repellendus eos sapiente natus dolorum atque quibusdam illum, dolores culpa consequuntur provident assumenda eveniet delectus commodi vel recusandae, quia harum libero. Quam veritatis et ipsa ex quas sapiente! Voluptatibus iusto ex pariatur distinctio atque eligendi perferendis perspiciatis.",
     price: 109.99,
     image:img_1,
