@@ -19,7 +19,7 @@ const Cart = () => {
                 {(c.price * c.count).toFixed(2)}
               </p>
               {/* *Sepette gelmiyor */}
-             {/* <p>{c.colors.color}</p>
+              {/* <p>{c.colors.color}</p>
              <p>{c.sizes.size}</p> */}
             </div>
             <div className="p-btn">

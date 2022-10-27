@@ -5,7 +5,18 @@ import { images } from "../../data/data";
 
 const Product = () => {
   const [activeImg, setActiveImg] = useState(images[0]);
-  const { product, addToCart } = useProduct();
+  const { product,setProduct, addToCart } = useProduct();
+  const [form, setForm] = useState({ sizes: "", colors: "" });
+
+  //colors, sizes
+  const handleFilterForm = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+  
+  // console.log(form);
 
   return (
     <main>
@@ -42,7 +53,13 @@ const Product = () => {
             </div>
             <form className="p-form">
               <label htmlFor="sizes">Sizes:</label>
-              <select name="sizes" id="sizes" className="select">
+              <select
+                value={form.sizes}
+                name="sizes"
+                id="sizes"
+                className="select"
+                onChange={handleFilterForm}
+              >
                 <option defaultValue="Seçiniz">Seçiniz</option>
                 {p.sizes.map((s) => (
                   <option key={s.id} value={s.size}>
@@ -51,7 +68,13 @@ const Product = () => {
                 ))}
               </select>
               <label htmlFor="colors">Colors:</label>
-              <select name="colors" id="colors" className="select">
+              <select
+                value={form.colors}
+                name="colors"
+                id="colors"
+                className="select"
+                onChange={handleFilterForm}
+              >
                 <option defaultValue="Seçiniz">Seçiniz</option>
                 {p.colors.map((c) => (
                   <option key={c.id} value={c.color}>
